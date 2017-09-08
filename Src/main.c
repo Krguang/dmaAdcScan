@@ -140,7 +140,6 @@ int main(void)
 		  ADC_ConvertedValueLocal[i] = (uint16_t)(ADC_ConvertedValue[i] & 0xFFF) * 3300 / 4096;
 		  serial_put_uint(ADC_ConvertedValueLocal[i]);
 		  HAL_Delay(50);
-		  
 	  }
 	  HAL_Delay(1000);
 	  HAL_UART_Transmit(&huart1, "\r\n", 4, 0xff);
